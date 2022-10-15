@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #000;
+  color:#f2f2f2;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* Navigation */
+
+.navbar {
+  color: #f2f2f2;
+  background-color: black;
+  max-height: 500px;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%);  
+}
+
+.navbar .dropdown-menu a:hover {
+  border: none;
+  background-color: #F9075F;
+  color: #f2f2f2;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #f2f2f2;
+}
+.navbar .navbar-nav .nav-link {
+  color: #f2f2f2;
+  font-size: 1.1em;
+}
+
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #F9075F;
+  width: 0%;
+  content: "";
+  height: 4px;
+  transition: all .5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+  
+/*Banner*/
+
+section {
+  padding: 100px;
+}
+
+.banner {
+  position: relative;
+  min-height: 90vh;
+  background: url(https://github.com/bnhh5/brandonhooper/blob/main/images/banner.png?raw=true); 
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner h2 {
+  font-size: 3em;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.5em;;
+}
+
+.banner h2 span {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #F9075F;
+}
+
+.banner h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: x-small;
+    padding: 10px;
+    line-height: 2px;
+    /* background-color: black; */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.footer .social a {
+  margin: 0 10px;
+}
+  
+.fa-instagram:hover {
+  color: #F9075F;
+}
+  
+@media (max-width: 768px) {
+
+  .banner {
+    position: relative;
+    min-height: 65vh;
+    background: url(https://github.com/bnhh5/brandonhooper/blob/main/images/banner.png?raw=true); 
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .banner h2 {
+    font-size: 2.75em;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.5em;
+  }
+  .banner h2 span {
+    font-weight: 700;
+    font-size: 1.25em;
+    color: #F9075F;
+  }
+  .banner h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #fff;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .navbar-brand img {
+      width: 100px;
+  }
+  
+  .navbar  {
+      flex-direction: column;
+  }
+
+  .navbar .navbar-nav .nav-items {
+      padding: .5em 1em;
+  }
+
+  .navbar li {
+      margin-left : 1.5em;
+      margin-right : 1.5em;
+  }
+
+
+}

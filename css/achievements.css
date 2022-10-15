@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #fff;
+  line-height: 1.6;
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(1,30,119,1) 50%, rgba(0,46,68,1) 100%);
+  color: #f2f2f2;
+}
+
+/* Navigation */
+
+.navbar-toggler-icon {
+  filter: invert(100%);  
+}
+
+.navbar .dropdown-menu a:hover {
+  border: none;
+  background-color: #ffba30;
+  color: #f2f2f2;
+}
+
+.navbar .dropdown-menu {
+  background-color: #f2f2f2;
+}
+
+.navbar-brand img {
+  width: 80px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #f2f2f2;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #f2f2f2;
+  font-size: 1.1em;
+}
+
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ffba30;
+  width: 0%;
+  content: "";
+  height: 4px;
+  transition: all .5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+  
+/* Page Introduction */
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+} 
+
+h1 {
+  max-width: 100ch;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 42px;
+  color: #f2f2f2;
+  text-shadow: 2px 2px #000;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  color: #f2f2f2;
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+  
+/* Achievement and Grades */
+
+.nestedgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: auto;
+}
+
+.nestedright {
+  text-align: right;
+}
+
+.nestedright i {
+  font-size: x-small;
+}
+
+.grades {
+  width: 95%;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+.grades_semester {
+  background-color: #fff;
+  color: #111;
+  margin: 16px 0;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ffba30;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+
+.grades_semester_header {
+  padding: 8px 48px 8px 16px;
+  min-height: 56px;
+  line-height: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grades_semester_header::after {
+  content: "\002B";
+  font-size: 32px;
+  position: absolute;
+  right: 16px;
+}
+
+.grades_semester_header.active::after {
+  content: "\2212";
+}
+
+.grades_semester_body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grades_semester_body_content {
+  padding: 16px;
+  line-height: 24px;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+.nested-grid2 {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  column-gap: 30px;
+}
+
+.achieve {
+  width: 95%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.achieve-year {
+  background-color: #fff;
+  color: #111;
+  margin: 16px 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #ffba30;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  padding: 20px;
+}
+
+.achieve-year-body {
+  max-height: 100%;
+  line-height: 24px;
+}
+
+.nestedleft {
+  text-align: left;
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: x-small;
+    padding: 10px;
+    line-height: 2px;
+
+}
+.footer .social a {
+  margin: 0 10px;
+}
+  
+.fa-instagram:hover {
+  color: #ffba30;
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .grades {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .achieve {
+    grid-template-columns: 1fr;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .card_header {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .nestedleft {
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand img {
+      width: 100px;
+  }
+  
+  .navbar  {
+      flex-direction: column;
+  }
+
+  .navbar .navbar-nav .nav-items {
+      padding: .5em 1em;
+  }
+
+  .navbar li {
+      margin-left : 1.5em;
+      margin-right : 1.5em;
+  }
+
+}
